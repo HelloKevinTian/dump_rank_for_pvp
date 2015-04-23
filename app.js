@@ -9,6 +9,8 @@ var getWeek = function (date) {
     var delay_day = 3;
     return Math.ceil((((date - onejan) / 86400000) + onejan.getDay() + 1 + delay_day) / 7);
 };
+
+//上周的week id
 var championship_id = getWeek(new Date()) - 1;
 
 //	zrange z_rank:1 0 1000 withscores
@@ -55,9 +57,9 @@ function runSample() {
 			}
 			require("fs").writeFile('rank_for_pvp.json', JSON.stringify(rank), 'utf8', function(err){
 				if(err){
-					console.log('failed');
+					console.log('dump failed');
 				}else{
-					console.log('ok');
+					console.log('dump success');
 				}
 			});
 			console.log(rank);
