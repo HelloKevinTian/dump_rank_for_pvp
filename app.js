@@ -1,5 +1,5 @@
 var redis = require("redis")
-var client = redis.createClient("25040","10.10.10.72",{"no_ready_check":true});
+var client = redis.createClient("25040","10.10.2.183",{"no_ready_check":true});
 //var client = redis.createClient("6380","127.0.0.1",{"no_ready_check":false});
 	
 //  current is the x week
